@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:    context-path: /sso
+    
+spring:  mvc:    view:      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  thymeleaf:    cache: true
+  devtools:    restart:      enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sso?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+
+mybatis:
+  type-aliases-package: com.company.mapper
+  
+fileuploadpath: E:/upload/
